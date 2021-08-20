@@ -1,0 +1,7 @@
+.mod-content {
+	padding: 60px 0;
+	color: $dark;
+	+ .mod-content {
+		padding-top: 0;
+	}
+}
