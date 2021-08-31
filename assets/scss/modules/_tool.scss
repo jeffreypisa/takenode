@@ -222,7 +222,7 @@ body.show-tool {
 					padding: 0;
 					position: relative;
 					.dropzone {
-						padding: 0 30px 0 0;
+						padding: 0;
 						position: absolute;
 						top: 0;
 						left: 0;
@@ -232,6 +232,11 @@ body.show-tool {
 						min-height: auto;
 						transition: 1s $ease;
 						color: $greydark;
+						&.dz-started {
+							.row.g-0 {
+								display: none;
+							}
+						}
 						h4 {
 							.hover {
 								display: none;
@@ -266,8 +271,30 @@ body.show-tool {
 								opacity: 0;
 							}
 						}
+						.dropzonecontent {
+							padding: 0 30px 0 0;
+						}
 						.dz-preview {
-							display: none;
+							display: block;
+							width: 100%;
+							.dz-image {
+								background: transparent;
+							}
+							.dz-progress {
+								background: #eee !important;
+							}
+							.dz-details {
+								.dz-size {
+									margin-bottom: 3em;
+								}
+								.dz-filename {
+									overflow: hidden;
+									text-overflow: ellipsis;
+									&:hover span {
+										border: 1px solid transparent;
+									}
+								}
+							}
 						}
 						&:hover, &.dz-drag-hover {
 							color: $blue;

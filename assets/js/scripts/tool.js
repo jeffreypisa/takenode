@@ -4,10 +4,14 @@ import Dropzone from 'dropzone';
 export function tool() {
 	Dropzone.options.myAwesomeDropzone = {
 		paramName: "file", // The name that will be used to transfer the file
-		maxFilesize: 99, // MB
-		accept: function() {
-			$('body').addClass('show-tool');
-		}
+		maxFilesize: 99999, // MB
+		init: function () {
+			this.on("complete", function () {
+			  if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
+				$('body').addClass('show-tool');
+			  }
+			});
+		  }
 	};
 	
 	$(".js-closetool").on("click", function(){

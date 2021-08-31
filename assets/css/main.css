@@ -12455,7 +12455,7 @@ body.show-tool .mod-tool .backgroundimage .uploadyourwork {
   position: relative;
 }
 .mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone {
-  padding: 0 30px 0 0;
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -12465,6 +12465,9 @@ body.show-tool .mod-tool .backgroundimage .uploadyourwork {
   min-height: auto;
   transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
   color: #3a3a3a;
+}
+.mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone.dz-started .row.g-0 {
+  display: none;
 }
 .mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone h4 .hover, .mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .h4 .hover {
   display: none;
@@ -12498,8 +12501,28 @@ body.show-tool .mod-tool .backgroundimage .uploadyourwork {
 .mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dz-message .dz-button {
   opacity: 0;
 }
+.mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dropzonecontent {
+  padding: 0 30px 0 0;
+}
 .mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dz-preview {
-  display: none;
+  display: block;
+  width: 100%;
+}
+.mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dz-preview .dz-image {
+  background: transparent;
+}
+.mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dz-preview .dz-progress {
+  background: #eee !important;
+}
+.mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dz-preview .dz-details .dz-size {
+  margin-bottom: 3em;
+}
+.mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dz-preview .dz-details .dz-filename {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone .dz-preview .dz-details .dz-filename:hover span {
+  border: 1px solid transparent;
 }
 .mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone:hover, .mod-tool .backgroundimage .uploadyourwork .card .card-body .dropzone.dz-drag-hover {
   color: #4c7ef2;
